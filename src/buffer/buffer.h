@@ -65,14 +65,13 @@ typedef struct buffer_s     buffer_t;
 void buffer_init (buffer_t *, uint8_t *, int16_t);
 void buffer_reset (buffer_t *);
 
-int16_t buffer_next (buffer_t *, int16_t);
-int16_t buffer_prev (buffer_t *, int16_t);
-
 /*!
  */
 void buffer_push (buffer_t *, uint8_t);
 uint8_t buffer_pop (buffer_t *);
 uint8_t buffer_pop_back (buffer_t *);
+
+uint8_t *buffer_head (buffer_t *);
 
 /*!
  */
