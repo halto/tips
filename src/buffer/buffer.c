@@ -123,6 +123,14 @@ uint8_t buffer_pop_back (buffer_t *bp)
     return (data);
 }
 
+uint8_t *buffer_head (buffer_t *bp)
+{
+    if (NULL != bp) {
+        return (&(bp->buffer[ bp->bcb.head ]));
+    }
+    return (NULL);
+}
+
 
 /*!
  */
